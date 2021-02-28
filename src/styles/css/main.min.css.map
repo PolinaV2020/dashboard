@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,IAAI,AAAC,CACH,eAAe,CAAE,MAAM,CACxB,AAED,AAAA,IAAI,AAAC,CACH,WAAW,CAAE,UAAU,CACxB,AAED,AAAA,QAAQ,AAAC,CACP,QAAQ,CAAE,QAAQ,CAClB,SAAS,CAAE,IAAI,CACf,MAAM,CAAE,MAAM,CACd,UAAU,CAAE,KAAK,CACjB,QAAQ,CAAE,MAAM,CACjB,ACdD,AAAA,IAAI,AAAC,CACH,OAAO,CAAE,IAAI,CACb,KAAK,CAAE,MAAM,CACb,MAAM,CAAE,KAAK,CACb,OAAO,CAAE,mBAAmB,CAC5B,kBAAkB,CAAE,eAAe,CACnC,qBAAqB,CAAE,WAAW,CAClC,QAAQ,CAAE,UAAU,CACpB,mBAAmB,CACnB,wFAGmB,CACnB,gBAAgB,CAAE,OAAO,CACzB,aAAa,CAAE,IAAI,CACpB,AAGD,AAAA,IAAI,CAAG,CAAC,AAAC,CACP,gBAAgB,CAAE,IAAI,CACtB,aAAa,CAAE,IAAI,CACpB,AAED,AAAA,OAAO,AAAC,CACN,SAAS,CAAE,QAAQ,CACpB,AAGD,AAAA,KAAK,AAAC,CACJ,SAAS,CAAE,MAAM,CAClB,AAED,AAAA,SAAS,AAAC,CACR,SAAS,CAAE,UAAU,CACtB,AAGD,AAAA,MAAM,AAAC,CACL,SAAS,CAAE,OAAO,CACnB,AAED,AAAA,OAAO,AAAC,CACN,SAAS,CAAE,QAAQ,CACpB,AAGD,AAAA,IAAI,AAAC,CACH,SAAS,CAAE,KAAK,CACjB,AOhDD,AAAA,QAAQ,AAAC,CACP,KAAK,CAAE,KAAK,CACZ,gBAAgB,CAAE,IAAI,CACvB",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/config/_variables.scss",
+        "../scss/config/_base.scss",
+        "../scss/components/_app.scss",
+        "../scss/components/_header.scss",
+        "../scss/components/_audience.scss",
+        "../scss/components/_cards.scss",
+        "../scss/components/_gender.scss",
+        "../scss/components/_geo.scss",
+        "../scss/components/_reach.scss",
+        "../scss/components/_sidebar.scss"
+    ],
+    "names": [],
+    "file": "main.min.css"
+}

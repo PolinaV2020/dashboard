@@ -1,0 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1440;
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow: hidden;
+}
