@@ -1,4 +1,90 @@
 .sidebar {
-  width: 7.65%;
+  width: 98px;
+  display: grid;
+  grid-template-rows: 35px 25px 25px 23px 17px 25px 25px 25px 30px;
+  height: 880px;
+  padding: 24px 18px 48px 18px;
   background-color: pink;
+
+
+  &__logo {
+    width: 51px;
+    height: 35px;
+    padding-bottom: 109px;
+    background: url(/src/images/icons/logo-icon.png);
+  }
+
+  &__link {
+   margin-bottom: 40px;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
+
+
+.sidebar__link--home {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+}
+
+.toggle {
+  margin-top: 152px;
+}
+
+
+.menu-btn {
+  display: none;
+  position: relative;
+  z-index: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+  .menu-btn__lines,
+  .menu-btn__lines::before,
+  .menu-btn__lines::after {
+    width: 1.5rem;
+    height: 0.1rem;
+    background-color: #111111;
+    transition: all .5s ease-in-out;
+  }
+
+  .menu-btn__lines::before,
+  .menu-btn__lines::after {
+    content: '';
+    position: absolute;
+  }
+
+  .menu-btn__lines::before {
+     transform: translateY(-.5rem);
+   }
+
+  .menu-btn__lines::after {
+    transform: translateY(.5rem);
+  }
+
+  .menu-btn.open .menu-btn__lines {
+    transform: translateX(2rem);
+    background-color: transparent;
+  }
+
+  .menu-btn.open .menu-btn__lines::before {
+    transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+    background-color: #FFFFFF;
+  }
+
+  .menu-btn.open .menu-btn__lines::after {
+    transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+    background-color: #FFFFFF;
+  }
+
+
+
+

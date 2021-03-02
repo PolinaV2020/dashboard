@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,8 +9,10 @@ body {
 
 .wrapper {
   position: relative;
-  max-width: 1440;
+  max-width: 1440px;
   margin: 0 auto;
   min-height: 100vh;
   overflow: hidden;
+  background-color: #EFF3F9;
+  border-radius: 14px;
 }

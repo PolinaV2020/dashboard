@@ -1,49 +1,59 @@
 .app {
   display: grid;
-  width: 92.34%;
-  height: 100vh;
-  padding: 43px 45px 47px 50px;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 3.63% 2.5%;
+  grid-gap: 49px;
+  grid-template-columns: 98px 1182px;
+
+
+  &__cards {
+  display: grid;
+  grid-gap: 32px;
+  margin-left: 49px;
+  padding: 43px 45px 47px 0px;
+  grid-template-columns: repeat(3, 28.85%);
+  grid-template-rows: 50px 148px 242px 242px;
+
   grid-template-areas: 
-  'header header header'
-  'card card card'
-  'audience audience reach'
-  'gender gender geo';
-  background-color: #EFF3F9;
-  border-radius: 14px;
+  "header header header"
+  "card__friends card__visitors card__followers"
+  "audience audience reach"
+  "gender gender geo";
+}
 }
 
 
-.app > * {
+.app__cards > * {
   background-color: pink;
   border-radius: 13px;
 }
 
 .header {
-  grid-area: "header";
+  grid-area: header;
 }
 
+.card__friends {
+  grid-area: card__friends;
+}
 
-.card {
-  grid-area: "card";
+.card__visitors {
+  grid-area: card__visitors;
+}
+
+.card__friends {
+  grid-area: card__followers;
 }
 
 .audience {
-  grid-area: "audience";
+  grid-area: audience;
 }
 
-
 .reach {
-  grid-area: "reach";
+  grid-area: reach;
 }
 
 .gender {
-  grid-area: "gender";
+  grid-area: gender;
 }
 
-
 .geo {
-  grid-area: "geo";
+  grid-area: geo;
 }

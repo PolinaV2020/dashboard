@@ -1,0 +1,79 @@
+@media screen and (max-width: 768px) {
+  .sidebar {
+    height: 1px;
+    width: 100%;
+  }
+
+  .app {
+    grid-gap: 0px;
+    grid-template-columns: 1fr;
+  }
+
+  .app__cards {
+    height: 100vh;
+    padding: 20px;
+    grid-gap: 3% 2%;
+    margin-left: 0;
+    grid-template-rows: 6.36% 16.81% 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "card__friends card__visitors card__followers"
+    "audience audience audience"
+    "geo geo reach"
+    "gender gender gender";
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+      .menu-items.open {
+        transform: translateX(0);
+      }
+
+      .menu-items li {
+        width: 100vw;
+        height: 100%;
+      }
+
+      .menu-items li a {
+        color: #FFFFFF;
+        font-size: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .menu-items li a:hover {
+        color: #111111;
+      }
+}
+
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    border-radius: 5px;
+  }
+
+  .app__cards {
+    grid-gap: 10px;
+    grid-template-rows: 80px repeat(3, 110px) repeat(4, 150px);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "card__friends"
+    "card__visitors"
+    "card__followers"
+    "audience"
+    "reach"
+    "gender"
+    "geo";
+ }
+
+ .app__cards > * {
+   border-radius: 5px;
+ }
+}
