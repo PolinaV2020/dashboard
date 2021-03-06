@@ -5,3 +5,9 @@
   color: #4F4F4F;
 }
 
+
+@mixin title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}

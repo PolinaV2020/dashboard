@@ -1,0 +1,40 @@
+.reach__diagram {
+  width: 121px;
+  height: 121px;
+  background: url();
+}
+
+.reach {
+  display: grid;
+  grid-template-rows: 30% 70%;
+  grid-template-columns: 86%;
+  align-items: center;
+  justify-content: center;
+}
+
+.reach__title {
+  @include title;
+}
+
+.reach__content {
+  display: grid;
+  grid-template-columns: 58% 42%;
+  height: 100%;
+}
+
+
+.reach__desc--desktop-indicator {
+  width: 16px;
+  height: 16px;
+  background-color: $first-color;
+  border: 1px solid $first-color;
+  border-radius: 5px;
+}
+
+.reach__desc--desktop-indicator {
+  width: 16px;
+  height: 16px;
+  background-color: $second-color;
+  border: 1px solid $second-color;
+  border-radius: 5px;
+}

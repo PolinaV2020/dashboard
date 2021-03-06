@@ -1,14 +1,16 @@
 .app {
   display: grid;
-  grid-gap: 49px;
+  grid-gap: 50px;
   grid-template-columns: 98px 1182px;
+  background-color: #EFF3F9;
+  color: $text-color;
+  font-family: 'Gilroy';
 
 
   &__cards {
   display: grid;
   grid-gap: 32px;
-  margin-left: 49px;
-  padding: 43px 45px 47px 0px;
+  padding: 43px 0px 47px 0px;
   grid-template-columns: repeat(3, 28.85%);
   grid-template-rows: 50px 148px 242px 242px;
 
@@ -17,14 +19,13 @@
   "card__friends card__visitors card__followers"
   "audience audience reach"
   "gender gender geo";
-}
-}
-
-
-.app__cards > * {
-  background-color: pink;
+  
+  & div {
   border-radius: 13px;
+  }
 }
+}
+
 
 .header {
   grid-area: header;
@@ -38,7 +39,7 @@
   grid-area: card__visitors;
 }
 
-.card__friends {
+.card__followers {
   grid-area: card__followers;
 }
 

@@ -1,21 +1,21 @@
-.sidebar {
-  width: 98px;
+.nav {
   display: grid;
-  grid-template-rows: 35px 25px 25px 23px 17px 25px 25px 25px 30px;
-  height: 880px;
-  padding: 24px 18px 48px 18px;
-  background-color: pink;
-
-
-  &__logo {
-    width: 51px;
-    height: 35px;
-    padding-bottom: 109px;
-    background: url(/src/images/icons/logo-icon.png);
-  }
+  width: 98px;
+  grid-template-columns: 98px;
+  grid-template-rows: 1fr repeat(5, 65px) 84px 77px 1fr;
+  min-height: 780px;
+  background-color: $background-color;
+  border: 1px solid #EBEBEB;
 
   &__link {
-   margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
   }
 
   a {
@@ -24,16 +24,75 @@
 }
 
 
-.sidebar__link--home {
-  width: 25px;
-  height: 25px;
-  background-color: red;
-}
+/*Styles for toggle*/
 
-.toggle {
-  margin-top: 152px;
-}
+  .sidebar__toggle {
+    display: flex;
+    align-self: flex-end;
+  }
 
+
+  .sidebar__checkbox[type='checkbox'] {
+    visibility: hidden;
+    display: none;
+  }
+
+
+  .sidebar__toggle--check {
+    display: block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: ease-in .6s;
+    border: 0.5px solid #4F4F4F;
+    background-color: $background-color;
+  }
+
+  .sidebar__checkbox[type='checkbox']:checked~.sidebar__toggle--check {
+    background-color: $background-color;
+  }
+
+  .sidebar__toggle--check:before {
+    content: '';
+    position: absolute;
+    background-color: $background-color;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: .6s;
+  }
+
+  .sidebar__checkbox[type='checkbox']:checked~.sidebar__toggle--check:before {
+    transform: translateX(-50px);
+  }
+
+  .sidebar__toggle--check:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: $first-color;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: .6s;
+    transform: translateX(10px);
+  }
+
+  .sidebar__checkbox[type='checkbox']:checked~.sidebar__toggle--check:after {
+    transform: translateX(0px);
+  }
+
+  
+
+
+
+
+
+/* Styles for responsive menu */
 
 .menu-btn {
   display: none;
@@ -47,43 +106,43 @@
   cursor: pointer;
 }
 
-  .menu-btn__lines,
-  .menu-btn__lines::before,
-  .menu-btn__lines::after {
-    width: 1.5rem;
-    height: 0.1rem;
-    background-color: #111111;
-    transition: all .5s ease-in-out;
-  }
+.menu-btn__lines,
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+  width: 1.5rem;
+  height: 0.1rem;
+  background-color: #111111;
+  transition: all .5s ease-in-out;
+}
 
-  .menu-btn__lines::before,
-  .menu-btn__lines::after {
-    content: '';
-    position: absolute;
-  }
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+  content: '';
+  position: absolute;
+}
 
-  .menu-btn__lines::before {
-     transform: translateY(-.5rem);
-   }
+.menu-btn__lines::before {
+   transform: translateY(-.5rem);
+ }
 
-  .menu-btn__lines::after {
-    transform: translateY(.5rem);
-  }
+.menu-btn__lines::after {
+  transform: translateY(.5rem);
+}
 
-  .menu-btn.open .menu-btn__lines {
-    transform: translateX(2rem);
-    background-color: transparent;
-  }
+.menu-btn.open .menu-btn__lines {
+  transform: translateX(2rem);
+  background-color: transparent;
+}
 
-  .menu-btn.open .menu-btn__lines::before {
-    transform: rotate(45deg) translate(-1.5rem, 1.5rem);
-    background-color: #FFFFFF;
-  }
+.menu-btn.open .menu-btn__lines::before {
+  transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+  background-color: #FFFFFF;
+}
 
-  .menu-btn.open .menu-btn__lines::after {
-    transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
-    background-color: #FFFFFF;
-  }
+.menu-btn.open .menu-btn__lines::after {
+  transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+  background-color: #FFFFFF;
+}
 
 
 

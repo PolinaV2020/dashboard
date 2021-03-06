@@ -1,0 +1,13 @@
+.audience {
+  display: grid;
+  grid-template-rows: 32% 68%;
+  width: 100%;
+  align-items: center;
+}
+
+
+.audience-diagram {
+  width: 716px;
+  height: 141px;
+  background: url(../../../images/diagrams/audience-diagram.png) cover/center no-repeat;
+}
