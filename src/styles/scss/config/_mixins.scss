@@ -11,3 +11,29 @@
   font-weight: 700;
   line-height: 24px;
 }
+
+@mixin description {
+  display: flex;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 600;
+  color: $text-color;
+}
+
+@mixin indicatorFirst{
+  width: 16px;
+  height: 16px;
+  background: $first-color;
+  border: 1px solid $first-color;
+  border-radius: 5px;
+  margin-right: 8px;
+}
+
+@mixin indicatorSecond {
+  width: 16px;
+  height: 16px;
+  background: $second-color;
+  border: 1px solid $second-color;
+  border-radius: 5px;
+  margin-right: 8px;
+}

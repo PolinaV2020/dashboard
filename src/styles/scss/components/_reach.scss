@@ -1,7 +1,6 @@
 .reach__diagram {
-  width: 121px;
-  height: 121px;
-  background: url();
+  width: 80%;
+  height: 80%;
 }
 
 .reach {
@@ -10,6 +9,7 @@
   grid-template-columns: 86%;
   align-items: center;
   justify-content: center;
+  background-color: $background-color;
 }
 
 .reach__title {
@@ -18,23 +18,21 @@
 
 .reach__content {
   display: grid;
-  grid-template-columns: 58% 42%;
+  grid-template-columns: 65% 35%;
   height: 100%;
 }
 
-
-.reach__desc--desktop-indicator {
-  width: 16px;
-  height: 16px;
-  background-color: $first-color;
-  border: 1px solid $first-color;
-  border-radius: 5px;
+.reach__desc--desktop,
+.reach__desc--mobile {
+  @include description;
 }
 
+
 .reach__desc--desktop-indicator {
-  width: 16px;
-  height: 16px;
-  background-color: $second-color;
-  border: 1px solid $second-color;
-  border-radius: 5px;
+  @include indicatorSecond;
+  margin-bottom: 11px;
+}
+
+.reach__desc--mobile-indicator {
+  @include indicatorFirst;
 }

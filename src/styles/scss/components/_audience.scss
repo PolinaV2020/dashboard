@@ -1,13 +1,156 @@
 .audience {
   display: grid;
   grid-template-rows: 32% 68%;
-  width: 100%;
+  grid-template-columns: 93%;
   align-items: center;
+  background-color: $background-color;
+  justify-content: center;
+
+  &__header {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 40% 35% 10% 15%;
+    height: 100%;
+   
+
+    &--title {
+      @include title;
+    }
+  }
 }
 
 
-.audience-diagram {
-  width: 716px;
-  height: 141px;
-  background: url(../../../images/diagrams/audience-diagram.png) cover/center no-repeat;
+
+.audience__diagram {
+  width: 100%;
+  height: 58%;
+}
+
+
+.audience__desc {
+  @include description;
+}
+
+.audience__header--date {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  @include description;
+}
+
+.audience__header--date::before,
+.audience__header--date::before {
+  content: "";
+  width: 4px;
+  background-color: $text-color;
+  position: absolute;
+  left: 200px;
+  top: 6px;
+  border: 0.1px solid #3A236A;
+  transform: rotate(45deg);
+}
+
+.audience__header--date::after {
+  content: "";
+  left: 204px;
+  transform: rotate(-45deg);
+}
+
+
+.audience__checkbox--total[type="checkbox"]:checked,
+.audience__checkbox--total[type="checkbox"]:not(:checked),
+.audience__checkbox--follower[type="checkbox"]:checked,
+.audience__checkbox--follower[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.audience__checkbox--total[type="checkbox"]:checked+.audience__desc,
+.audience__checkbox--total[type="checkbox"]:not(:checked)+.audience__desc,
+.audience__checkbox--follower[type="checkbox"]:checked+.audience__desc,
+.audience__checkbox--follower[type="checkbox"]:not(:checked)+.audience__desc {
+  display: inline-block;
+  position: relative;
+  padding-left: 24px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+
+.audience__checkbox--total[type="checkbox"]:checked+.audience__desc:before,
+.audience__checkbox--total[type="checkbox"]:not(:checked)+.audience__desc:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $first-color;
+  background-color: $background-color;
+  border-radius: 5px;
+}
+
+
+.audience__checkbox--follower[type="checkbox"]:checked+.audience__desc:before,
+.audience__checkbox--follower[type="checkbox"]:not(:checked)+.audience__desc:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $second-color;
+  background-color: $background-color;
+  border-radius: 5px;
+}
+
+.audience__checkbox--total[type="checkbox"]:checked+.audience__desc:before,
+.audience__checkbox--total[type="checkbox"]:not(:checked)+.audience__desc:before,
+.audience__checkbox--follower[type="checkbox"]:checked+.audience__desc:before,
+.audience__checkbox--follower[type="checkbox"]:not(:checked)+.audience__desc:before {
+  border-radius: 5px;
+}
+
+
+.audience__checkbox--total[type="checkbox"]:checked+.audience__desc:after,
+.audience__checkbox--total[type="checkbox"]:not(:checked)+.audience__desc:after,
+.audience__checkbox--follower[type="checkbox"]:checked+.audience__desc:after,
+.audience__checkbox--follower[type="checkbox"]:not(:checked)+.audience__desc:after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+.audience__checkbox--total[type="checkbox"]:checked+.audience__desc:after,
+.audience__checkbox--total[type="checkbox"]:not(:checked)+.audience__desc:after {
+  left: 3px;
+  top: 4px;
+  width: 10px;
+  height: 5px;
+  border-radius: 1px;
+  border-left: 1px solid $first-color;
+  border-bottom: 1px solid $first-color;
+  transform: rotate(-45deg);
+}
+
+.audience__checkbox--follower[type="checkbox"]:checked+.audience__desc:after,
+.audience__checkbox--follower[type="checkbox"]:not(:checked)+.audience__desc:after {
+  left: 3px;
+  top: 4px;
+  width: 10px;
+  height: 5px;
+  border-radius: 1px;
+  border-left: 1px solid $second-color;
+  border-bottom: 1px solid $second-color;
+  transform: rotate(-45deg);
+}
+
+.audience__checkbox--total[type="checkbox"]:not(:checked)+.audience__desc:after,
+.audience__checkbox--follower[type="checkbox"]:not(:checked)+.audience__desc:after {
+  opacity: 0;
+}
+
+.audience__checkbox--total[type="checkbox"]:checked+.audience__desc:after,
+.audience__checkbox--follower[type="checkbox"]:checked+.audience__desc:after {
+  opacity: 1;
 }

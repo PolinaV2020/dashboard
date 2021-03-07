@@ -1,0 +1,64 @@
+.header {
+  display: grid;
+  grid-template-columns: 14% 18% 54% 1fr;
+  width: 100%;
+  align-items: center;
+
+  &__title {
+    @include title;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+
+.header__search {
+  display: flex;
+  justify-content: center;
+}
+
+.header__search--input {
+  width: 153px;
+  height: 32px;
+  border: 1px solid #EBEBEB;
+  border-radius: 8px;
+  background: #FDFDFF;
+}
+
+
+
+.header__profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.header__profile--name {
+  @include title;
+}
+
+
+.header__profile--photo {
+  width: 50px;
+  height: 50px;
+  background: url(../../images/persons/profile-photo.png);
+}
+
+
+.header__profile--photo::before {
+  content: "";
+  width: 4px;
+  background-color: $text-color;
+  position: absolute;
+  left: -10px;
+  top: 6px;
+  border: 0.1px solid #3A236A;
+  transform: rotate(45deg);
+}
+
+.header__profile--photo::after {
+  content: "";
+  left: 14px;
+  transform: rotate(-45deg);
+}

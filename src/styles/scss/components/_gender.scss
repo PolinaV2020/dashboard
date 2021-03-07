@@ -1,23 +1,44 @@
 .gender {
   display: grid;
-  flex-direction: column;
   grid-template-rows: 32% 68%;
+  grid-template-columns: 93%;
   width: 100%;
+  height: 100%;
   align-items: center;
-}
-
-.gender__header--title {
-  @include title;
-}
+  background-color: $background-color;
+  justify-content: center;
 
 
-.gender__header {
+  &__header {
   display: grid;
-  grid-template-columns: 80% 1fr 1fr;
+  grid-template-columns: 76% 1fr 1fr;
+  height: 100%;
+  align-items: center;
+ }
+
+  &__diagram {
+        display: flex;
+        text-align: center;
+        align-self: center;
+        width: 100%;
+        height: 100%;
+  }
+
+  &__indicator {
+    @include description;
+    height: 100%;
+    align-items: center;
+
+    &--box-women {
+    @include indicatorSecond;
+    }
+
+    &--box-men {
+    @include indicatorFirst;
+    }
+  }
 }
 
-.gender__diagram {
-  width: 716px;
-  height: 141px;
-  background: url(../../images/diagrams/gender-diagram.png);
+.gender__title {
+  @include title;
 }

@@ -19,11 +19,19 @@
   "card__friends card__visitors card__followers"
   "audience audience reach"
   "gender gender geo";
-  
-  & div {
-  border-radius: 13px;
-  }
 }
+}
+
+
+.header,
+.card__friends,
+.card__visitors,
+.card__followers,
+.audience,
+.reach,
+.gender,
+.geo {
+  border-radius: 13px;
 }
 
 
@@ -49,6 +57,7 @@
 
 .reach {
   grid-area: reach;
+  border-radius: 13px;
 }
 
 .gender {
