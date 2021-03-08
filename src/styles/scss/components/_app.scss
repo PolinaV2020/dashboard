@@ -5,6 +5,12 @@
   background-color: #EFF3F9;
   color: $text-color;
   font-family: 'Gilroy';
+  width: 1280px;
+  margin: 0 auto;
+  z-index: 10;
+  position: absolute;
+  top: 160px;
+  left: 160px;
 
 
   &__cards {

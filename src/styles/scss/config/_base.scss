@@ -5,10 +5,31 @@ html {
 
 .wrapper {
   position: relative;
-  max-width: 1440px;
+  width: 1600px;
+  height: 1200px;
   margin: 0 auto;
   min-height: 100vh;
   overflow: hidden;
-  background-color: #EFF3F9;
+  background-color: #FFFFFF;
   border-radius: 14px;
+}
+
+.wrapper__element--left {
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  width: 1498px;
+  height: 806px;
+  background: url(../../images/background/ellipse-left.png) no-repeat;
+  z-index: 0;
+}
+
+.wrapper__element--right {
+  position: absolute;
+  right: 0px;
+  top: 932px;
+  width: 413px;
+  height: 413px;
+  background: url(../../images/background/ellipse-right.png) no-repeat;
+  z-index: 100;
 }

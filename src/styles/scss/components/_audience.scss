@@ -33,27 +33,26 @@
 
 .audience__header--date {
   display: flex;
-  position: relative;
   justify-content: center;
+  position: relative;
+  align-items: center;
   @include description;
 }
 
 .audience__header--date::before,
-.audience__header--date::before {
+.audience__header--date::after {
   content: "";
   width: 4px;
-  background-color: $text-color;
+  height: 0.1px;
   position: absolute;
-  left: 200px;
-  top: 6px;
+  background-color: $text-color;
   border: 0.1px solid #3A236A;
-  transform: rotate(45deg);
+  transform: translateX(82px) rotate(45deg);
+  cursor: pointer;
 }
 
 .audience__header--date::after {
-  content: "";
-  left: 204px;
-  transform: rotate(-45deg);
+  transform: translateX(86px) rotate(-45deg);
 }
 
 

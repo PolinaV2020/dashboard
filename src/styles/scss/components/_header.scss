@@ -1,6 +1,6 @@
 .header {
   display: grid;
-  grid-template-columns: 14% 18% 54% 1fr;
+  grid-template-columns: 14% 18% 54% 10%;
   width: 100%;
   align-items: center;
 
@@ -13,8 +13,7 @@
 
 
 .header__search {
-  display: flex;
-  justify-content: center;
+  position: relative;
 }
 
 .header__search--input {
@@ -23,7 +22,26 @@
   border: 1px solid #EBEBEB;
   border-radius: 8px;
   background: #FDFDFF;
+  position: relative;
+
+  &::placeholder {
+    font-size: 12px;
+    font-weight: 500;
+    color: #979797;
+    padding-left: 40px;
+  }
 }
+
+  .search-icon {
+    top: calc(50% - 5px);
+    left: 20px;
+    height: 10px;
+    width: 11px;
+    position: absolute;
+    z-index: 1;
+    background: url(../../images/icons/magnifier.png) no-repeat;
+  }
+
 
 
 
@@ -40,25 +58,38 @@
 
 
 .header__profile--photo {
+  display: flex;
   width: 50px;
   height: 50px;
   background: url(../../images/persons/profile-photo.png);
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 
 .header__profile--photo::before {
-  content: "";
+  content: '';
   width: 4px;
+  height: 0.1px;
   background-color: $text-color;
   position: absolute;
-  left: -10px;
-  top: 6px;
+  left: 60px;
+  top: 22px;
   border: 0.1px solid #3A236A;
   transform: rotate(45deg);
+  cursor: pointer;
 }
 
 .header__profile--photo::after {
-  content: "";
-  left: 14px;
+  content: '';
+  width: 4px;
+  height: 0.1px;
+  left: 64px;
+  top: 22px;
+  background-color: $text-color;
+  border: 0.1px solid #3A236A;
   transform: rotate(-45deg);
+  position: absolute;
+  cursor: pointer;
 }

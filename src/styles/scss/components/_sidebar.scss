@@ -21,7 +21,46 @@
   a {
     text-decoration: none;
   }
+
 }
+
+
+
+.sidebar__toggle {
+  height: 90px;
+}
+
+  .sidebar-icon {
+    fill: #DFE6F1;
+    transition: fill ease 0.5s;
+  }
+
+
+  .nav__link:before {
+    visibility: hidden;
+    opacity: 0;
+    content: '';
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 0;
+    width: 4px;
+    height: 50px;
+    background-color: $first-color;
+    border-radius: 0px 5px 5px 0px;
+    transition: all ease 0.5s;
+  }
+
+  .nav__link:hover:before {
+    visibility: visible;
+    opacity: 1;
+    background-color: $first-color;
+  }
+   
+  .nav__link:hover .sidebar-icon {
+    fill: $first-color;
+  }
+
+
 
 
 /*Styles for toggle*/

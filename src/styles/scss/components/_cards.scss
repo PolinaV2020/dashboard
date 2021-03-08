@@ -20,13 +20,14 @@
      @include title;
     }  
 
-    &--span {
+    &--menu {
      position: relative;
      height: 5px;
      width: 5px;
      border-radius: 50%;
      background: #979797;
      justify-self: flex-end;
+     cursor: pointer;
 
        &::before {
          position: absolute;
@@ -36,6 +37,7 @@
          width: 5px;
          border-radius: 50%;
          background: #979797;
+         cursor: pointer;
        }
 
        &::after {
@@ -46,6 +48,7 @@
          width: 5px;
          border-radius: 50%;
          background: #979797;
+         cursor: pointer;
       }
   }
 }
