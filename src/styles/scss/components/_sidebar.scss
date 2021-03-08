@@ -6,8 +6,10 @@
   min-height: 780px;
   background-color: $background-color;
   border: 1px solid #EBEBEB;
+  height: 100%;
 
-  &__link {
+  &__link,
+  &__logo {
     position: relative;
     display: flex;
     width: 100%;
@@ -21,12 +23,12 @@
   a {
     text-decoration: none;
   }
-
 }
 
 
-
 .sidebar__toggle {
+  display: flex;
+  justify-content: center;
   height: 90px;
 }
 
@@ -104,15 +106,12 @@
     transition: .6s;
   }
 
-  .sidebar__checkbox[type='checkbox']:checked~.sidebar__toggle--check:before {
-    transform: translateX(-50px);
-  }
 
   .sidebar__toggle--check:after {
     content: '';
     position: absolute;
     top: 5px;
-    right: 5px;
+    left: 25px;
     background-color: $first-color;
     width: 20px;
     height: 20px;
@@ -121,9 +120,14 @@
     transform: translateX(10px);
   }
 
-  .sidebar__checkbox[type='checkbox']:checked~.sidebar__toggle--check:after {
-    transform: translateX(0px);
+  .sidebar__checkbox[type='checkbox']:checked~.sidebar__toggle--check:before {
+   transform: translateX(-50px);
   }
+
+  .sidebar__checkbox[type='checkbox']:checked~.sidebar__toggle--check:after {
+    transform: translateX(-20px);
+  }
+
 
   
 
@@ -136,52 +140,53 @@
 .menu-btn {
   display: none;
   position: relative;
-  z-index: 1;
   display: none;
   justify-content: center;
   align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 30px;
+  height: 1px;
   cursor: pointer;
 }
 
-.menu-btn__lines,
-.menu-btn__lines::before,
-.menu-btn__lines::after {
-  width: 1.5rem;
-  height: 0.1rem;
-  background-color: #111111;
-  transition: all .5s ease-in-out;
+.menu-btn {
+  display: flex;
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  cursor: pointer;
 }
 
-.menu-btn__lines::before,
-.menu-btn__lines::after {
+.menu-btn__lines {
+  position: relative;
+  width: 30px;
+  height: 1px;
+  top: 30px;
+  left: 30px;
+  background-color: black;
+}
+
+.menu-btn__lines:before,
+.menu-btn__lines:after {
   content: '';
   position: absolute;
+  left: 0px;
+  width: 30px;
+  height: 2px;
+  background-color: black;
 }
 
-.menu-btn__lines::before {
-   transform: translateY(-.5rem);
- }
-
-.menu-btn__lines::after {
-  transform: translateY(.5rem);
+.menu-btn__lines:before {
+    top: -10px;
 }
 
-.menu-btn.open .menu-btn__lines {
-  transform: translateX(2rem);
-  background-color: transparent;
+.menu-btn__lines:after {
+    top: 10px;
 }
 
-.menu-btn.open .menu-btn__lines::before {
-  transform: rotate(45deg) translate(-1.5rem, 1.5rem);
-  background-color: #FFFFFF;
-}
 
-.menu-btn.open .menu-btn__lines::after {
-  transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
-  background-color: #FFFFFF;
-}
+
 
 
 

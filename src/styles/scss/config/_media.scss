@@ -7,14 +7,18 @@
   .app {
     grid-gap: 0px;
     grid-template-columns: 1fr;
-  }
+    top: 15px;
+    left: 15px;
+    width: 96%;
+    }
+  
 
   .app__cards {
     height: 100vh;
     padding: 20px;
     grid-gap: 3% 2%;
     margin-left: 0;
-    grid-template-rows: 6.36% 16.81% 1fr 1fr 1fr;
+    grid-template-rows: 10% 17% 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     "header header header"
@@ -22,6 +26,11 @@
     "audience audience audience"
     "geo geo reach"
     "gender gender gender";
+  }
+
+  .header {
+    align-items: flex-end;
+    grid-template-columns: 25% 25% 30% 15%;
   }
 
 
@@ -33,29 +42,21 @@
     display: block;
   }
 
-      .menu-items.open {
-        transform: translateX(0);
-      }
+    .wrapper {
+      width: 100%;
+      height: 1100px;
+    }
 
-      .menu-items li {
-        width: 100vw;
-        height: 100%;
-      }
+    .wrapper__element--right {
+     display: none;
+    }
 
-      .menu-items li a {
-        color: #FFFFFF;
-        font-size: 5vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-      }
-
-      .menu-items li a:hover {
-        color: #111111;
-      }
+    .reach__diagram {
+      width: 100px;
+      height: 100px;
+    }
 }
+
 
 
 @media screen and (max-width: 576px) {
@@ -65,7 +66,7 @@
 
   .app__cards {
     grid-gap: 10px;
-    grid-template-rows: 80px repeat(3, 110px) repeat(4, 150px);
+    grid-template-rows: 220px repeat(3, 110px) repeat(4, 150px);
     grid-template-columns: 1fr;
     grid-template-areas:
     "header"
@@ -81,4 +82,54 @@
  .app__cards > * {
    border-radius: 5px;
  }
+
+  .wrapper {
+   width: 100%;
+   height: 1305px;
+  }
+
+  .app {
+    top: 5px;
+    left: 5px;
+    width: 96%;
+  }
+
+  .app__cards {
+    width: 90%;
+  }
+
+
+ .header {
+   height: 120px;
+   grid-gap: 5px;
+   grid-template-columns: 90% 10%;
+   grid-template-rows: 33.33% 33.33% 33.33%;
+   grid-template-areas: 
+   "header-title""header-title"
+   "header-profile""header-profile"
+   "header-input" "header-bell";
+ }
+
+
+ .header__title {
+   grid-area: header-title;
+   width: 100%;
+ }
+
+ .header__profile {
+   display: flex;
+   justify-content: flex-start;
+   grid-area: header-profile;
+   width: 100%;
+ }
+
+ .header__bell {
+   grid-area: header-bell;
+ }
+
+ .header__search {
+   grid-area: header-input;
+ }
+
+
 }
